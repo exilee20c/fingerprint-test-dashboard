@@ -20,10 +20,10 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <div className="page-header">
-            <h1><Link to="/">Javascript Fingerprint<small> 브라우져를 식별하기 위한 자바스크립트 라이브러리</small></Link></h1>
+          <div className="page-header col-xs-12">
+            <h1><Link to="/">Javascript Fingerprint<small> 브라우저를 식별하기 위한 자바스크립트 라이브러리</small></Link></h1>
           </div>
-          <div className="col-lg-3">
+          <div className="col-xs-12 col-sm-5 col-md-4 col-lg-3">
             <ul className="nav nav-pills nav-stacked">
               <NavItem to="/valve">Valve/fingerprintjs2</NavItem>
               <NavItem to="/client">ClientJS</NavItem>
@@ -32,8 +32,8 @@ class App extends Component {
               <NavItem to="/carlo">carlo/jquery-browser-fingerprint</NavItem>
             </ul>
           </div>
-          <div className="col-lg-9">
-            <Route exact path="/" component={Home}/>
+          <div className="col-xs-12 col-sm-7 col-md-8 col-lg-9">
+            <Route exact path="/" component={Valve}/>
             <Route path="/valve" component={Valve}/>
             <Route path="/client" component={Client}/>
             <Route path="/fingerprint" component={Fingerprint}/>
