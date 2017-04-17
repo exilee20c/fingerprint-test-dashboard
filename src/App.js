@@ -27,18 +27,12 @@ class App extends Component {
             <ul className="nav nav-pills nav-stacked">
               <NavItem to="/valve">Valve/fingerprintjs2</NavItem>
               <NavItem to="/client">ClientJS</NavItem>
-              <NavItem to="/fingerprint">fingerprint</NavItem>
-              <NavItem to="/rynr">rynr/fingerprint.js</NavItem>
-              <NavItem to="/carlo">carlo/jquery-browser-fingerprint</NavItem>
             </ul>
           </div>
           <div className="col-xs-12 col-sm-7 col-md-8 col-lg-9">
-            <Route exact path="/" component={Valve}/>
+            <Route exact path="/" component={Home}/>
             <Route path="/valve" component={Valve}/>
             <Route path="/client" component={Client}/>
-            <Route path="/fingerprint" component={Fingerprint}/>
-            <Route path="/rynr" component={Rynr}/>
-            <Route path="/carlo" component={Carlo}/>
           </div>
         </div>
       </Router>
