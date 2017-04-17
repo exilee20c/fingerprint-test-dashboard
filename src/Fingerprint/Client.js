@@ -11,7 +11,7 @@ class Client extends Component {
       isAutoRefresh: false,
 
       options_count: 1,
-      options_isCutsom: false
+      options_isCutsom: true
     };
 
     this.handle = {
@@ -227,9 +227,13 @@ class Client extends Component {
   }
 
   componentDidMount() {
-    window.setInterval(this.handle.handleRefresh, 1000);
+    this.interval = window.setInterval(this.handle.handleRefresh, 1000);
 
     this.initClientJS();
+  }
+
+  componentWillUnmount() {
+    window.clearInterval(this.interval);
   }
 
   render() {

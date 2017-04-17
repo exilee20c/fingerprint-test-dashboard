@@ -7,10 +7,7 @@ import {
 import Home from './Home';
 import {
   Valve,
-  Client,
-  Fingerprint,
-  Rynr,
-  Carlo
+  Client
 } from './Fingerprint';
 import NavItem from './NavItem';
 import './App.css';

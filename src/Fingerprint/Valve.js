@@ -128,9 +128,13 @@ class Valve extends Component {
   }
 
   componentDidMount() {
-    window.setInterval(this.handle.handleRefresh, 1000);
+    this.interval = window.setInterval(this.handle.handleRefresh, 1000);
 
     this.handleGetFingerprint();
+  }
+
+  componentWillUnmount() {
+    window.clearInterval(this.interval);
   }
 
   render() {
@@ -169,6 +173,48 @@ class Valve extends Component {
         {
           this.state.isDisplayOptionsPanel ?
             <form className="form-horizontal">
+              <div className="form-group">
+                <div>
+                  <label className="col-xs-2 control-label">
+                    swfContainerId
+                  </label>
+                  <div className="col-xs-10">
+                    <input type="text"
+                           name="options_swfContainerId"
+                           className="form-control"
+                           value={this.state.options_swfContainerId}
+                           onChange={this.handle.handleInputChange} />
+                  </div>
+                </div>
+              </div>
+              <div className="form-group">
+                <div>
+                  <label className="col-xs-2 control-label">
+                    swfPath
+                  </label>
+                  <div className="col-xs-10">
+                    <input type="text"
+                           name="options_swfPath"
+                           className="form-control"
+                           value={this.state.options_swfPath}
+                           onChange={this.handle.handleInputChange} />
+                  </div>
+                </div>
+              </div>
+              <div className="form-group">
+                <div>
+                  <label className="col-xs-2 control-label">
+                    userDefinedFonts
+                  </label>
+                  <div className="col-xs-10">
+                    <input type="text"
+                           name="options_userDefinedFonts"
+                           className="form-control"
+                           value={this.state.options_userDefinedFonts}
+                           onChange={this.handle.handleInputChange} />
+                  </div>
+                </div>
+              </div>
               <div className="form-group">
                 <div className="col-xs-offset-1">
                   <div className="checkbox">
