@@ -27,7 +27,7 @@ class App extends Component {
             </ul>
           </div>
           <div className="col-xs-12 col-sm-7 col-md-8 col-lg-9">
-            <Route exact path="/" component={Home}/>
+            <Route exact path="/" component={Valve}/>
             <Route path="/valve" component={Valve}/>
             <Route path="/client" component={Client}/>
           </div>
