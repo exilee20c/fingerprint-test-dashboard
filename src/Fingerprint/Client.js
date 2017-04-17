@@ -11,7 +11,7 @@ class Client extends Component {
       isAutoRefresh: false,
 
       options_count: 1,
-      options_isCutsom: true
+      options_isCutsom: false
     };
 
     this.handle = {
